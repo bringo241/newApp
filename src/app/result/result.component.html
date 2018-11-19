@@ -1,1 +1,7 @@
-<div>{{counter}}</div>
+<div>{{parentCount}}</div>
+
+<ul>
+    <li *ngFor="let item of history" class="pixel" [ngStyle]="{'bottom': item.parentCount.currentValue+'px'}">
+    </li>
+</ul>
+

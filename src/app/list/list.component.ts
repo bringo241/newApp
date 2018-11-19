@@ -11,7 +11,6 @@ import { GraphData } from '../linedata';
 export class ListComponent implements OnInit {
 
   @Input()  count = 0;
-  @Output() countChange = new EventEmitter<number>();
 
   list: Button[];
   history: GraphData[];
@@ -23,24 +22,12 @@ export class ListComponent implements OnInit {
   }
 
   onClick(list): void {
-    if (!this.count) {
-      this.count = 0;
-    }
-    if (!this.history) {
-      this.history = '';
-    }
+
     if (list.operator === '+') {
       this.count = this.count + 1;
     } else if (list.operator === '-') {
       this.count = this.count - 1;
     }
-    //console.log(this.history);
-    // this.history += this.count.toString();
-    /*this.history.datas.push({
-      date: new Date();
-      data: this.count
-    });*/
-
   }
 
   getDatas(): void {

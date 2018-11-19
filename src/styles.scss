@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+.pixel{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-bottom: 1px solid black;
+}
+
+ul {
+
+}
+
+li {
+    display:inline;
+}
+
+.list li{
+    cursor: pointer;
+    user-select: none;
+}

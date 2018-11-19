@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-result',
@@ -7,13 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
-  counter = 2;
+  @Input() parentCount:number;
+
+  history: any = [];
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
-
+  ngOnChanges(changes: SimpleChanges) {
+    this.history.push(changes);
+  }
 
 }
