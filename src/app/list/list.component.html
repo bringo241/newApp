@@ -1,0 +1,9 @@
+<ul class="list">
+  <li *ngFor="let item of list" (click)="onClick(item)" [class.selected]="button === selectedButton">
+    {{item.label}}
+  </li>
+</ul>
+
+<div>{{count}}</div>
+
+<app-result></app-result>
